@@ -1,0 +1,30 @@
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>NorthStar Upload</title>
+    <link rel="stylesheet" href="../static/indexCSS.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../static/uploadfile.js" type = "text/javascript"></script>
+
+</head>
+<body>
+
+<img src="../static/logo.jpg">
+<p>Welcome to NorthStar.AI, please upload a .csv file</p>
+
+
+
+
+<form enctype="multipart/form-data" method="post"   action="/upload">
+   <input type="file" name="Upload">
+   <input type="submit" name="Submit" >
+</form>
+
+
+
+
+
+</body>
+</html>
