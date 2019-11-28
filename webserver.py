@@ -4,8 +4,11 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import cross_origin
 import pandas
 import pickle
+import psycopg2
 
 from sklearn.preprocessing import RobustScaler
+DATABASE_URL="postgres://wfbuebdbcgdhhp:80e1efd073c910df429618085408516bf81d7468cec0eeab41af299b46b37838@ec2-23-21-248-1.compute-1.amazonaws.com:5432/d5kcgmjupq5eet"
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 model = pickle.load(open('LogisiticRegression.sav', 'rb'))
 
@@ -28,7 +31,9 @@ def upload():
        data['Amount'] = rob_scaler.fit_transform(data['Amount'].values.reshape(-1, 1))
        data['Time'] = rob_scaler.fit_transform(data['Time'].values.reshape(-1, 1))
        #for some reason scaling is required for non frauds but for fraud no scaling
-       model.predict(data)
+       preds = model.predict(data)
+       data['Class'] = preds
+       data.to_sql('claimsreport', con=conn,  if_exists='append')
 
     return "Upload Successful";
 
