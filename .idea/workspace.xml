@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da59a224-d0df-46f8-b3d5-6069c7de97ca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../NorthStarUI/frontend/my-app" beforeDir="false" afterPath="$PROJECT_DIR$/../NorthStarUI/frontend/my-app" afterDir="false" />
     </list>
@@ -146,7 +144,7 @@
       <updated>1574654854008</updated>
       <workItem from="1574654903756" duration="27964000" />
       <workItem from="1574901978200" duration="23016000" />
-      <workItem from="1574927342062" duration="11318000" />
+      <workItem from="1574927342062" duration="11655000" />
     </task>
     <servers />
   </component>
