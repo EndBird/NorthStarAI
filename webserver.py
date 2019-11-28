@@ -40,8 +40,8 @@ def upload():
 @app.route("/getdata")
 def senddata():
     query = "SELECT count(*) FROM claimsreport;"
-    conn = engine.connect()
-    result = conn.execute(query)
+
+    result = engine.execute(query).fetchall()
     print(result)
     return result
 
