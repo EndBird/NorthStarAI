@@ -43,7 +43,7 @@ def senddata():
 
     result = engine.execute(query).fetchall()
     print(result[0][0])
-    return result[0][0]
+    return str(result[0][0])
 
 
 
