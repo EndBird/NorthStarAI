@@ -35,7 +35,7 @@ def upload():
        preds = model.predict(data)
        data['Class'] = preds
        data.to_sql('claimsreport', con=engine,  if_exists='append')
-
+       engine.close()
     return "Upload Successful";
 
 
