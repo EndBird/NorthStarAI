@@ -42,8 +42,8 @@ def senddata():
     query = "SELECT count(*) FROM claimsreport;"
 
     result = engine.execute(query).fetchall()
-    print(result)
-    return result
+    print(result[0][0])
+    return result[0][0]
 
 
 
