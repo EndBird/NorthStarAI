@@ -1,5 +1,6 @@
 import os
-
+import json
+import requests
 from flask import Flask, request, jsonify, render_template
 from flask_cors import cross_origin
 import pandas
@@ -42,14 +43,24 @@ def senddata():
     query = "SELECT count(*) FROM claimsreport;"
 
     result = engine.execute(query).fetchall()
-    print(result[0][0])
-    return str(result[0][0])
+    res = {"numclaims": result[0][0]}
+    return json.dumps(res)
+
+@app.route("/login")
+def login():
+    print("howdy")
+    data = request.args
+    for i in data:
+        print(i)
+    return "{status:true}"
+
+
 
 
 
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT',5000))
 
     app.run(host = '0.0.0.0', port=port)

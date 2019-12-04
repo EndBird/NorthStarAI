@@ -1,0 +1,15 @@
+tools:
+  exceptions: did not implement
+  logging: logdna (Julian said i went the page to install it so he would give me the marks, because actual installation requires credit card info)
+  ci: 
+
+services:
+  production: http://northstarai.herokuapp.com/
+
+docs:
+  getting_started:for the backend the starting point is to run webserver.py.  
+commands:
+  bootstrap: pip install
+  database:
+    the database is made by the backend in the app, and it is automatically put on heroku.  
+  server: py webserver.py 
