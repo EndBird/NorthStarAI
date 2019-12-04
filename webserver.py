@@ -52,7 +52,7 @@ def login():
     data = request.args
     for i in data:
         print(i)
-    return "{status:true}"
+    return '{"status":true}'
 
 
 
