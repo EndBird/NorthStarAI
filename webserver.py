@@ -39,6 +39,7 @@ def upload():
 
     return "Upload Successful";
 @app.route("/getdata")
+@cross_origin()
 def senddata():
     query = "SELECT count(*) FROM claimsreport;"
 
@@ -47,6 +48,7 @@ def senddata():
     return json.dumps(res)
 
 @app.route("/login")
+@cross_origin()
 def login():
     print("howdy")
     data = request.args
