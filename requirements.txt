@@ -56,7 +56,7 @@ pickleshare==0.7.5
 prometheus-client==0.7.1
 promise==2.2.1
 prompt-toolkit==2.0.10
-psutil==5.6.2
+psutil==5.6.6
 pyarmor==5.5.6
 Pygments==2.4.2
 pyparsing==2.4.5
