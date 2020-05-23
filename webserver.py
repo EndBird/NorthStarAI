@@ -44,7 +44,7 @@ def senddata():
     query = "SELECT count(*) FROM claimsreport;"
 
     result = engine.execute(query).fetchall()
-    res = {"numclaims": result[0][0]}
+    res = {"numclaims": result[0][0], "status":res}
     return json.dumps(res)
 
 @app.route("/login")
